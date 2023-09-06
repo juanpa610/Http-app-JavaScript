@@ -60,10 +60,13 @@ h1 {
 
 .card {
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
-  padding: 30px 0;
+  flex-direction: row;
+  align-content: center;
   justify-content: center;
+  width: 100%;
+  padding: 20px 0 0;
+  min-height: 660px;
 }
 
 .read-the-docs {
@@ -77,9 +80,9 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  /* background-color: #1a1a1a; */
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 10px ;
 }
 button:hover {
   border-color: #646cff;
@@ -88,6 +91,13 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+button:disabled{
+  border-color: 1px solid red;
+  pointer-events:none ;
+}
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -105,10 +115,11 @@ button:focus-visible {
 
 .character{
   width: 100px ;
+  height: 100px ;
   margin: 0px 15px 30px 15px;
   border-radius: 10%;
-  transition: all .2s;
-  border: 3px solid #ebebeb42;
+  transition: transform .2s;
+  border: 3px solid #ebebebc7;
 }
 
 .character:hover{
